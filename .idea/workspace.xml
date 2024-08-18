@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="703cd3f1-106d-49ce-a212-e297b10aec05" name="Changes" comment="First test">
-      <change afterPath="$PROJECT_DIR$/demos/d01/test_firsttest_beforeeach.py" afterDir="false" />
+    <list default="true" id="703cd3f1-106d-49ce-a212-e297b10aec05" name="Changes" comment="next test">
+      <change afterPath="$PROJECT_DIR$/demos/d02/test_dynamic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demos/d03/test_navigation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python tests.Python tests for firsttest.test_reversal_of_input.executor": "Run",
+    "Python tests.Python tests for test_dynamic.test_error_is_displayed_and_hidden.executor": "Run",
+    "Python tests.Python tests for test_firsttest_beforeeach.test_reversal_of_input.executor": "Run",
     "Python tests.test_has_title.executor": "Run",
     "Python tests.test_has_title1.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -50,7 +52,7 @@
       <recent name="C:\GitHub\Courses\playwright-intro\Python-Playwright-intro\demos" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for demos.d01.test_firsttest.test_reversal_of_input">
+  <component name="RunManager" selected="Python tests.Python tests for test_dynamic.test_error_is_displayed_and_hidden">
     <configuration name="Python tests for demos.d01.test_firsttest.test_reversal_of_input" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Python-Playwright-intro" />
       <option name="ENV_FILES" value="" />
@@ -63,6 +65,36 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;demos.d01.test_firsttest.test_reversal_of_input&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_dynamic.test_error_is_displayed_and_hidden" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python-Playwright-intro" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demos/d02" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_dynamic.test_error_is_displayed_and_hidden&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_firsttest_beforeeach.test_reversal_of_input" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Python-Playwright-intro" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demos/d01" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_firsttest_beforeeach.test_reversal_of_input&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -83,6 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_dynamic.test_error_is_displayed_and_hidden" />
+        <item itemvalue="Python tests.Python tests for test_firsttest_beforeeach.test_reversal_of_input" />
         <item itemvalue="Python tests.Python tests for demos.d01.test_firsttest.test_reversal_of_input" />
         <item itemvalue="Python tests.test_has_title1" />
       </list>
@@ -112,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723973139871</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="next test">
+      <option name="closed" value="true" />
+      <created>1723979130318</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723979130318</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -120,6 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First test" />
-    <option name="LAST_COMMIT_MESSAGE" value="First test" />
+    <MESSAGE value="next test" />
+    <option name="LAST_COMMIT_MESSAGE" value="next test" />
   </component>
 </project>
