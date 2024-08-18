@@ -1,10 +1,12 @@
 import re
 from playwright.sync_api import Page, expect
-def test_application_navigation(page:Page):
+
+
+def test_application_navigation(page: Page):
     page.goto('/a03')
 
-    inputBox = page.get_by_role("textbox", name= "Input")
-    button = page.get_by_role("button", name= 'Go to Reverse Page')
+    inputBox = page.get_by_role("textbox", name="Input")
+    button = page.get_by_role("button", name='Go to Reverse Page')
 
     inputBox.fill('navigate')
     button.click()
