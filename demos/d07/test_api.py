@@ -7,8 +7,8 @@ API_URL = "https://playwright-intro.vercel.app/a11/counter"
 class Locators:
 
     def __init__(self):
-        self.theButton = None
-        self.theLabel = None
+        self.the_button = None
+        self.the_label = None
 
 
 @pytest.fixture(scope="module")
@@ -18,8 +18,8 @@ def locators():
 
 @pytest.fixture(scope="function", autouse=True)
 def before_each(page: Page, locators):
-    locators.theButton = page.get_by_role("button", name="Increment")
-    locators.theLabel = page.get_by_text("Counter: ")
+    locators.the_button = page.get_by_role("button", name="Increment")
+    locators.the_label = page.get_by_text("Counter: ")
 
     yield
 
@@ -31,9 +31,9 @@ def test_starting_from_scratch(page: Page, playwright: Playwright, locators):
     reset_api.dispose()
 
     page.goto("/a11")
-    expect(locators.theLabel).to_contain_text("0")
-    locators.theButton.click()
-    expect(locators.theLabel).to_contain_text("1")
+    expect(locators.the_label).to_contain_text("0")
+    locators.the_button.click()
+    expect(locators.the_label).to_contain_text("1")
 
 
 @pytest.mark.skip(reason="because syncs")
@@ -43,6 +43,6 @@ def test_resetting_the_counter(page: Page, playwright: Playwright, locators):
     reset_api.dispose()
 
     page.goto("/a11")
-    expect(locators.theLabel).to_contain_text("5")
-    locators.theButton.click()
-    expect(locators.theLabel).to_contain_text("6")
+    expect(locators.the_label).to_contain_text("5")
+    locators.the_button.click()
+    expect(locators.the_label).to_contain_text("6")
