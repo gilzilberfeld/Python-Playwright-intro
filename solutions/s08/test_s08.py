@@ -7,12 +7,12 @@ from playwright.sync_api import expect, BrowserContext, Page
 class Locators:
 
     def __init__(self):
-        self.googleButton = None
-        self.wikiButton = None
-        self.testingilButton = None
-        self.googleImage = None
-        self.wikiImage = None
-        self.testingilImage = None
+        self.google_button = None
+        self.wiki_button = None
+        self.testingil_button = None
+        self.google_image = None
+        self.wiki_image = None
+        self.testingil_image = None
 
 
 @pytest.fixture(scope="module")
@@ -23,29 +23,29 @@ def locators():
 @pytest.fixture(scope="function", autouse=True)
 def before_each(page: Page, locators):
     page.goto("/a10")
-    locators.googleButton = page.get_by_role("button", name= "Google" )
-    locators.testingilButton = page.get_by_role("button", name= "TestinGil" )
-    locators.wikiButton = page.get_by_role("button", name= "Wikipedia" )
+    locators.google_button = page.get_by_role("button", name="Google")
+    locators.testingil_button = page.get_by_role("button", name="TestinGil")
+    locators.wiki_button = page.get_by_role("button", name="Wikipedia")
     the_frame = page.main_frame.child_frames[0]
-    locators.googleImage = the_frame.get_by_role('img', name = 'google')
-    locators.testingilImage = the_frame.get_by_alt_text("TestinGil")
-    locators.wikiImage = the_frame.locator('.central-featured-logo')
+    locators.google_image = the_frame.get_by_role('img', name ='google')
+    locators.testingil_image = the_frame.get_by_alt_text("TestinGil")
+    locators.wiki_image = the_frame.locator('.central-featured-logo')
 
 def test_google_has_google_image_and_no_testinGil_or_Wiki_image(locators):
-   locators.googleButton.click()
-   expect(locators.googleImage).to_be_visible()
-   expect(locators.testingilImage).to_be_hidden()
-   expect(locators.wikiImage).to_be_hidden()
+   locators.google_button.click()
+   expect(locators.google_image).to_be_visible()
+   expect(locators.testingil_image).to_be_hidden()
+   expect(locators.wiki_image).to_be_hidden()
 
 def test_testinGil_has_testingil_image_and_no_google_or_wiki_image(locators):
-   locators.testingilButton.click()
-   expect(locators.testingilImage).to_be_visible()
-   expect(locators.googleImage).to_be_hidden()
-   expect(locators.wikiImage).to_be_hidden()
+   locators.testingil_button.click()
+   expect(locators.testingil_image).to_be_visible()
+   expect(locators.google_image).to_be_hidden()
+   expect(locators.wiki_image).to_be_hidden()
 
 
 def test_Wiki_has_Wiki_image_and_no_TestinGil_Google_image(locators):
-   locators.wikiButton.click()
-   expect(locators.wikiImage).to_be_visible()
-   expect(locators.googleImage).to_be_hidden()
-   expect(locators.testingilImage).to_be_hidden()
+   locators.wiki_button.click()
+   expect(locators.wiki_image).to_be_visible()
+   expect(locators.google_image).to_be_hidden()
+   expect(locators.testingil_image).to_be_hidden()
