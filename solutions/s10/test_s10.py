@@ -10,7 +10,6 @@ import common
 # APIs :   a12/storage
 # 1. Write a test that proves the operation succeeded
 
-@pytest.mark.skip("Under construction")
 def test_adding_name_works_correctly(page: Page, playwright: Playwright):
     page.goto("/a12")
 

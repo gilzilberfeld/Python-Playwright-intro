@@ -24,7 +24,6 @@ def before_each(page: Page, locators):
     yield
 
 
-@pytest.mark.skip(reason="because syncs")
 def test_starting_from_scratch(page: Page, playwright: Playwright, locators):
     reset_api = playwright.request.new_context().post(API_URL, data={"newCounter": "0"})
     assert reset_api.ok
@@ -36,7 +35,6 @@ def test_starting_from_scratch(page: Page, playwright: Playwright, locators):
     expect(locators.the_label).to_contain_text("1")
 
 
-@pytest.mark.skip(reason="because syncs")
 def test_resetting_the_counter(page: Page, playwright: Playwright, locators):
     reset_api = playwright.request.new_context().post(API_URL, data={"newCounter": "5"})
     assert reset_api.ok
