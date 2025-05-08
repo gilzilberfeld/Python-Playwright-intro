@@ -4,10 +4,6 @@ from playwright.sync_api import expect, BrowserContext
 # for a08
 # Open the app on two pages in a browser
 # Write a test plan and implement for the chat functionality
-# Use common.BASE_URL + /a08,  instead of just /a08
-import common
-
-app_url = "%sa08" % common.BASE_URL
 
 
 class Locators:
@@ -34,8 +30,8 @@ def locators():
 def before_each(context: BrowserContext, locators):
     page1 = context.new_page()
     page2 = context.new_page()
-    page1.goto(app_url)
-    page2.goto(app_url)
+    page1.goto('/a08')
+    page2.goto('/a08')
 
     locators.log1 = page1.get_by_role("textbox", name="log")
     locators.input1 = page1.get_by_role("textbox", name="Input")
@@ -64,13 +60,11 @@ def test_startup(locators):
     expect(locators.input2).to_be_empty()
 
 
-@pytest.mark.skip(reason="Under construction")
 def test_refreshing_shows_an_empty_log(locators):
     locators.refresh_button1.click()
     expect(locators.log1).to_contain_text("Start here->")
 
 
-@pytest.mark.skip(reason="Under construction")
 def test_sending_and_refreshing_on_the_same_page(locators):
     locators.input1.fill('abc')
     locators.send_button1.click()
@@ -86,7 +80,6 @@ def test_sending_resetting_and_refreshing_clears_the_log_on_the_same_page(locato
     expect(locators.log1).not_to_contain_text("abc")
 
 
-@pytest.mark.skip(reason="Under construction")
 def test_sending_on_page_1_then_refreshing_on_page_2(locators):
     locators.input1.fill('abc')
     locators.send_button1.click()
@@ -102,7 +95,6 @@ def test_sending_resetting_on_page_1_then_refreshing_clears_the_log_on_page_2(lo
     expect(locators.log2).not_to_contain_text("abc")
 
 
-@pytest.mark.skip(reason="Under construction")
 def test_sending_on_page_1_sending_on_page_2_then_refreshing_on_both(locators):
     locators.input1.fill('abc')
     locators.send_button1.click()
