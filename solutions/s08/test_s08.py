@@ -27,8 +27,8 @@ def before_each(page: Page, locators):
     locators.testingil_button = page.get_by_role("button", name="TestinGil")
     locators.wiki_button = page.get_by_role("button", name="Wikipedia")
     the_frame = page.main_frame.child_frames[0]
-    locators.google_image = the_frame.get_by_role('img', name='google')
-    locators.testingil_image = the_frame.get_by_alt_text("TestinGil")
+    locators.google_image = the_frame.locator('.lnXdpd')
+    locators.testingil_image = the_frame.get_by_role("link", name="TestinGil")
     locators.wiki_image = the_frame.locator('.central-featured-logo')
 
 
