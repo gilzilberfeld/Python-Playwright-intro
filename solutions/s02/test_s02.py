@@ -77,21 +77,21 @@ def test_typing_anything_clears_first_empty_error(locators):
     locators.last_name_box.fill('a')
     locators.button.click()
     locators.first_name_box.fill('a')
-    expect(locators.last_name_error_text).to_be_hidden()
+    expect(locators.first_name_error_text).to_be_hidden()
 
 
 def test_typing_anything_clears_last_empty_error(locators):
     locators.first_name_box.fill('a')
     locators.button.click()
     locators.last_name_box.fill('a')
-    expect(locators.first_name_error_text).to_be_hidden()
+    expect(locators.last_name_error_text).to_be_hidden()
 
 
 def test_typing_anything_on_non_empty_field_clears_empty_error(locators):
     locators.first_name_box.fill('a')
     locators.button.click()
     locators.first_name_box.fill('b')
-    expect(locators.first_name_error_text).to_be_hidden()
+    expect(locators.last_name_error_text).to_be_hidden()
 
     locators.first_name_box.clear()
     locators.last_name_box.clear()
@@ -99,4 +99,4 @@ def test_typing_anything_on_non_empty_field_clears_empty_error(locators):
     locators.last_name_box.fill('a')
     locators.button.click()
     locators.last_name_box.fill('b')
-    expect(locators.last_name_error_text).to_be_hidden()
+    expect(locators.first_name_error_text).to_be_hidden()
